@@ -1,21 +1,56 @@
 #include <stdio.h>
+int main (){
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int torre = 1, bispo = 1, rainha, escolhaJogador;
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+     //CRIAÇÃO DE UM MENU PARA ESCOLHA DE PEÇAS A SER MOVIMENTADA
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    printf("## JOGO DE XADREZ ##\n");
+    printf("Escolha o NÚMERO da PEÇA que deseja MOVIMENTAR: \n");
+    printf("1 TORRE\n");
+    printf("2 BISPO\n");
+    printf("3 RAINHA\n");
+    printf("Escolha:\n");
+    scanf("%d", &escolhaJogador);
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    switch (escolhaJogador)
+    {
+    case 1:  //MOVIMENTO DA TORRE - WHILE
+    printf("VOCÊ ESCOLHEU A TORRE\n");   
+    while (torre <= 5)
+    {
+    printf("DIREITA\n", torre);
+    torre++;
+    }
+        break;
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    case 2:   //MOVIMENTO DO BISPO - DO WHILE
+    printf("VOCÊ ESCOLHEU O BISPO\n"); 
+    do
+    {
+    printf("CIMA\n", bispo);
+    printf("DIREITA\n", bispo);
+    bispo++;
+    } while (bispo <= 5);
+        break;
+
+    case 3:   //MOVIMENTO DA RAINHA - FOR
+    printf("VOCÊ ESCOLHEU A RAINHA\n");
+    for (int rainha = 0; rainha < 8; rainha++)
+    {
+        printf("ESQUERDA\n");
+    }
+        break;
+
+    default:
+    printf("Opção inválida!\n");
+    break;
+}
+
+
+return 0;
+
+}
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
@@ -28,5 +63,4 @@ int main() {
     // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
     // Inclua o uso de continue e break dentro dos loops.
 
-    return 0;
-}
+ 
