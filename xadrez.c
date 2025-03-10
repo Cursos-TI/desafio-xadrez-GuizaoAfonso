@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main (){
 
-int torre = 1, bispo = 1, rainha, escolhaJogador;
+int torre = 1, bispo = 1, rainha, cavalo, escolhaJogador;
 
      //CRIAÇÃO DE UM MENU PARA ESCOLHA DE PEÇAS A SER MOVIMENTADA
 
@@ -10,6 +10,7 @@ int torre = 1, bispo = 1, rainha, escolhaJogador;
     printf("1 TORRE\n");
     printf("2 BISPO\n");
     printf("3 RAINHA\n");
+    printf("4 CAVALO\n");
     printf("Escolha:\n");
     scanf("%d", &escolhaJogador);
 
@@ -19,10 +20,10 @@ int torre = 1, bispo = 1, rainha, escolhaJogador;
     printf("VOCÊ ESCOLHEU A TORRE\n");   
     while (torre <= 5)
     {
-    printf("DIREITA\n", torre);
+    printf("DIREITA\n", torre);  
     torre++;
     }
-        break;
+    break;
 
     case 2:   //MOVIMENTO DO BISPO - DO WHILE
     printf("VOCÊ ESCOLHEU O BISPO\n"); 
@@ -32,7 +33,7 @@ int torre = 1, bispo = 1, rainha, escolhaJogador;
     printf("DIREITA\n", bispo);
     bispo++;
     } while (bispo <= 5);
-        break;
+    break;
 
     case 3:   //MOVIMENTO DA RAINHA - FOR
     printf("VOCÊ ESCOLHEU A RAINHA\n");
@@ -40,7 +41,24 @@ int torre = 1, bispo = 1, rainha, escolhaJogador;
     {
         printf("ESQUERDA\n");
     }
-        break;
+    break;
+
+    // Nível Aventureiro - Movimentação do Cavalo
+    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
+    // Um loop pode representar a movimentação horizontal e outro vertical.
+
+    case 4:   //MOVIMENTO DO CAVALO EM "L" - FOR (ANINHADO)
+    printf("VOCÊ ESCOLHEU O CAVALO\n");
+    for (int cavalo = 1; cavalo <= 2; cavalo++)
+    {
+        printf("BAIXO\n");
+    }
+        for (int cavalo = 1; cavalo <= 1; cavalo++)
+        {
+        printf("ESQUERDA\n");
+        }
+    
+    break;    
 
     default:
     printf("Opção inválida!\n");
@@ -52,9 +70,7 @@ return 0;
 
 }
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
